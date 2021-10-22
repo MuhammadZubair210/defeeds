@@ -1,0 +1,243 @@
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 22px;
+  /* left: 16px; */
+  font-size: 14px;
+  border-block-start: 6%;
+  margin: 1% 1%;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  /* left: 16px; */
+  width: 40px;
+  height: 40px;
+  margin: 2% 1%;
+  border-radius: 50px;
+  border: 3px solid;
+}
+
+.profile-img {
+  /* left: 16px; */
+  width: 40px;
+  height: 40px;
+  /* margin: 2% 1%; */
+  border-radius: 50px;
+  border: 3px solid;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: transparent !important;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.Home .center {
+  width: 50%;
+  border: 1px solid gainsboro;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.story-imgs,
+.story-div {
+  /* width: 181px; */
+  /* height: 200px !important; */
+  /* border-radius: 10px; */
+}
+
+.story-div {
+  /* margin: 2% 1%; */
+}
+
+.post {
+  border-radius: 24px !important;
+  margin: 0% 1% !important;
+}
+
+.sub-post {
+  margin: 3%;
+  border: 1px solid;
+  border-color: papayawhip;
+
+  border-radius: 10px;
+  padding: 3% 8%;
+  /* background-color: #ced4db; */
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.photos-feelings-heading {
+  font-size: 14px;
+}
+.sub-post-3 {
+  margin: 3%;
+  border: 1px solid #ced4db;
+  border-radius: 10px;
+}
+
+.home-heading {
+  padding: 1%;
+  display: flex;
+  margin: 0% 2%;
+}
+
+.slide2 {
+  width: 89% !important;
+  margin: 0% 2% !important;
+}
+/* .carousel-inner {
+  width: 108%!important;
+} */
+
+.width {
+  width: 91% !important;
+}
+.mapu {
+  width: 55px;
+}
+
+.top-right-fixed {
+  background: black !important;
+  opacity: 0.7;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  visibility: hidden;
+}
+/* recommendation friend */
+
+.recomm-div-1 {
+  /* margin: 0 0% 0% 1%; */
+  text-align: center;
+  /* border: 1px solid #ced4db; */
+  border-radius: 11px;
+  padding: 1%;
+}
+
+.recomm-img-1 {
+  width: 140px;
+  height: 144px;
+  border-radius: 10px;
+}
+.recomm-span-1 {
+  font-size: 9px;
+}
+.recomm-img-2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+}
+.recomm-div-2 {
+  padding: 5%;
+  text-align: center;
+  color: white;
+  background-color: #3aa1f2;
+  height: 35px;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+.people-you-may-know {
+  margin: 0 1%;
+}
+.main-recomm {
+  margin: 0px 3%;
+  /* border: 1px solid #ced4db; */
+  border-radius: 10px;
+  padding: 1% 0px;
+  overflow: scroll;
+}
+
+.Home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel img {
+  width: auto !important;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.profile-name {
+  display: flex;
+  width: 31%;
+  margin: 3%;
+}
+.pet-discover {
+  margin-top: 0;
+}
+.name-puppy {
+  margin: 5%;
+}
+.pet-pic {
+  width: 63px;
+  height: 59px;
+  border-radius: 80%;
+  position: relative;
+  object-fit: cover;
+}
+.heading-h4-discover {
+  margin: -4% 3%;
+  font-weight: 700;
+}
+.para-3 {
+  color: grey;
+  margin: 0 2% 3%;
+}
+
+.discover-dots {
+  font-size: 2rem;
+  margin: 0 24px 3% 0;
+}
+.post-image-relative {
+  position: relative;
+}
+.top-right-fixed {
+  top: 0 !important;
+  right: 0 !important;
+  position: absolute;
+  height: 100%;
+  padding: 3%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.icons-all-disc {
+  cursor: pointer;
+  padding: 3%;
+}

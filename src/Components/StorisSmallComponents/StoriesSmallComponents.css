@@ -1,0 +1,293 @@
+.Story {
+  border: 1px solid lightgray;
+  width: 124%;
+  height: 90 !important;
+  background-color: rgb(43, 43, 43);
+}
+.stori-dog {
+  width: 40%;
+  margin: 2%;
+  border-radius: 10px;
+}
+.story2-display {
+  display: flex;
+  justify-content: center;
+}
+
+.story2-dog {
+  width: 48px;
+  height: 48px;
+  border-radius: 80%;
+  object-fit: cover;
+  border: 3px solid blue;
+}
+
+.story-sound {
+  position: absolute !important;
+  top: 6%;
+  left: 52.5%;
+}
+
+.story-play {
+  display: flex;
+}
+.name-sto {
+  margin: 0 5%;
+  color: white;
+}
+.stori-input {
+  width: 15% !important;
+  border: 1px solid;
+  border-radius: 60px;
+  margin-bottom: 0 !important;
+}
+
+.inputsto {
+  border: 25px !important;
+  border-radius: 25px;
+  background: white !important;
+}
+
+.inpt-grp {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: none !important;
+  background: white !important;
+}
+.all-emojis-input {
+  margin: 1% 0;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbsupemoji {
+  font-size: 2.2rem !important;
+  margin-right: 5px;
+}
+.like {
+  background: #3578e5;
+  border-radius: 57px;
+  padding: 3px;
+  color: white;
+}
+
+.heart {
+  background: rgb(218, 79, 79);
+  border-radius: 57px;
+  padding: 3px;
+  color: white;
+}
+.emoji {
+  color: rgb(234, 236, 84);
+}
+
+.reaction-emojis-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+
+@keyframes animated {
+  0% {
+    background-color: red;
+    top: 100%;
+  }
+  25% {
+    background-color: yellow;
+    top: 120%;
+  }
+  50% {
+    background-color: blue;
+    top: 300%;
+  }
+  75% {
+    background-color: green;
+    top: 400%;
+  }
+  100% {
+    background-color: red;
+    top: 0px;
+  }
+}
+
+.animated-div {
+  width: 200% !;
+  animation-name: animated;
+  animation-duration: 4s;
+}
+
+.emojis-click {
+  cursor: pointer;
+}
+
+.emoji-1 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+/* .reaction-emojis-div2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 350px;
+    top: 250px;
+  }
+}
+
+.emoji-2 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: example-2;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example-2 {
+  0% {
+    right: 0px;
+    top: 0px;
+  }
+  100% {
+    right: 350px;
+    top: 250px;
+  }
+}
+
+.emoji-3 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: example-3;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example-3 {
+  0% {
+    left: 0px;
+    bottom: 0px;
+  }
+  100% {
+    left: 350px;
+    bottom: 250px;
+  }
+}
+
+.emoji-4 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: example-4;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example-4 {
+  0% {
+    right: 0px;
+    bottom: 0px;
+  }
+  100% {
+    right: 350px;
+    bottom: 250px;
+  }
+}
+
+/* .emoji-5 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  /* position: relative; */
+  /* animation-name: example-5;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example-5 {
+  0% {
+    left: 300px;
+    bottom: -50px;
+  }
+  100% {
+    left: 300px;
+    bottom: 250px;
+  }
+}  */
+
+.emoji-5 {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: example-6;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example-6 {
+  0% {
+    left: 300px;
+    top: -50px;
+  }
+  /* 10% {
+    left: 310px;
+    top: -90px;
+  }
+  20% {
+    left: 320px;
+    top: -130px;
+  }
+  30% {
+    left: 300px;
+    top: -140px;
+  }
+
+
+  40% {
+    left: 310px;
+    top: -170px;
+  } */
+  50% {
+    left: 300px;
+    top: -150px;
+  }
+  /* 60% {
+    left: 290px;
+    top: -230px;
+  }
+  70% {
+    left: 280px;
+    top: -270px;
+  }
+  80% {
+    left: 290px;
+    top: -300px;
+  }
+  90% {
+    left: 300px;
+    top: -300px;
+  } */
+  100% {
+    left: 310px;
+    top: -300px;
+  }
+}

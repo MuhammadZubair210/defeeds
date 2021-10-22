@@ -1,0 +1,94 @@
+[debug] [2020-05-10T02:22:32.819Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T02:22:32.821Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-05-10T02:22:32.821Z] CLI Version:   7.12.1
+[debug] [2020-05-10T02:22:32.821Z] Platform:      darwin
+[debug] [2020-05-10T02:22:32.821Z] Node Version:  v12.14.0
+[debug] [2020-05-10T02:22:32.822Z] Time:          Sun May 10 2020 07:22:32 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-05-10T02:22:32.822Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T02:22:32.822Z] 
+[debug] [2020-05-10T02:22:32.829Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-10T02:22:32.829Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/apple/slooth-web
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using attraction-6c456.
+[debug] [2020-05-10T02:22:37.527Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-10T02:22:37.527Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-10T02:22:42.772Z] <<< HTTP RESPONSE 200
+[debug] [2020-05-10T02:22:42.797Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/attraction-6c456  
+ 
+[debug] [2020-05-10T02:23:25.004Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T02:23:25.006Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-05-10T02:23:25.006Z] CLI Version:   7.12.1
+[debug] [2020-05-10T02:23:25.006Z] Platform:      darwin
+[debug] [2020-05-10T02:23:25.006Z] Node Version:  v12.14.0
+[debug] [2020-05-10T02:23:25.007Z] Time:          Sun May 10 2020 07:23:25 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-05-10T02:23:25.007Z] ----------------------------------------------------------------------
+[debug] [2020-05-10T02:23:25.007Z] 
+[debug] [2020-05-10T02:23:25.013Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-10T02:23:25.014Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/apple/slooth-web
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using attraction-6c456.
+[debug] [2020-05-10T02:23:54.729Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/attraction-6c456  
+ 
+[debug] [2020-05-10T02:23:59.308Z] <<< HTTP RESPONSE 403
+[debug] [2020-05-10T02:23:59.310Z] <<< HTTP RESPONSE BODY
+[debug] [2020-05-10T02:23:59.313Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-05-10T02:24:08.481Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/Users/apple/.config/yarn/global/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/Users/apple/.config/yarn/global/node_modules/firebase-tools/lib/api.js:39:35)
+    at Request.self.callback (/Users/apple/.config/yarn/global/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (/Users/apple/.config/yarn/global/node_modules/request/request.js:1161:10)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (/Users/apple/.config/yarn/global/node_modules/request/request.js:1083:12)
+    at Object.onceWrapper (events.js:299:28)
+    at IncomingMessage.emit (events.js:215:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1184:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to get Firebase project attraction-6c456. Please make sure the project exists and your account has permission to access it.

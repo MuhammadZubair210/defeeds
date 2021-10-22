@@ -1,0 +1,285 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.sidenav {
+  display: flex;
+  flex-direction: row;
+  margin: 5% 0%;
+  padding: 0px 8%;
+}
+.side-icons {
+  width: 10%;
+  margin: 7% 0;
+}
+.side-text {
+  width: 90%;
+  margin: 7%;
+}
+.home {
+  width: 100%;
+}
+
+.logo {
+  width: 3rem !important;
+  /* margin: 15% 32%!important; */
+}
+.anchor {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem !important;
+}
+.anchor:hover {
+  /* color: rgba(29,161,242,1.00); */
+}
+
+.main-code {
+  /* margin: -1% 4% !important; */
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+.search {
+  margin: 3% 10%;
+}
+
+.button {
+  border-radius: 12px;
+  width: 200px;
+}
+
+.main-btn {
+  padding: 0 35%;
+  height: 45px;
+  border-radius: 23px;
+  text-align: center;
+  background-color: rgba(29, 161, 242, 1) !important;
+  color: white;
+  font-size: 1.5rem;
+  margin: 5%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-btn:hover {
+  background-color: rgb(27, 166, 251) !important;
+  color: white;
+}
+
+/* .sidenav-us:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer; */
+/* color: rgba(29, 161, 242, 1) !important; */
+/* width: 95%!important; */
+/* } */
+/* .sidenav-out:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgba(29, 161, 242, 1) !important;
+} */
+.sidenav-user:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer;
+  /* color: rgba(29, 161, 242, 1) !important; */
+  /* width: 112%!important; */
+}
+.sidenav-pet:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgba(29, 161, 242, 1) !important;
+  /* width: 105%!important; */
+}
+.sidenav-missing:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgba(29, 161, 242, 1) !important;
+  /* width: 112%!important; */
+}
+.sidenav-place:hover {
+  background-color: rgb(219, 237, 248) !important;
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgba(29, 161, 242, 1) !important;
+  /* width: 115%!important; */
+}
+
+.all-btns-head {
+  margin: -9% 3% 9% 0;
+  display: flex;
+}
+.dots-butn {
+  background-color: white !important;
+  border: 1px solid rgba(29, 161, 242, 1) !important;
+  color: rgba(29, 161, 242, 1) !important;
+  border-radius: 16px !important;
+}
+.dots-butn:hover {
+  background-color: rgb(230, 236, 240) !important;
+  color: white !important;
+}
+.fa {
+  display: flex;
+}
+
+.btn {
+  text-align: center;
+}
+
+.fixed {
+  position: fixed;
+  width: 15%;
+}
+.logo-notification {
+  margin: 15% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.notification-icon-div {
+  background: rgba(29, 161, 242, 1) !important;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  border-radius: 44px;
+  padding: 7%;
+  color: white;
+  margin: 0% -45%;
+}
+
+.notification-icon-div {
+  /* width: 100px;
+  height: 100px; */
+  background: rgba(29, 161, 242, 1) !important;
+  position: relative;
+  /* animation-name: example; */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0 -22%;
+  cursor: pointer;
+}
+
+@keyframes example {
+  /* 0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;} */
+  0% {
+    background: rgba(29, 161, 242, 1) !important;
+  }
+  25% {
+    background: pink;
+  }
+  50% {
+    background: rgba(29, 161, 242, 1) !important;
+  }
+  75% {
+    background: pink;
+  }
+  100% {
+    background: rgba(29, 161, 242, 1) !important;
+  }
+}
+.notification-number {
+  position: absolute;
+  color: black;
+  bottom: 31px;
+  right: 35px;
+  /* background: rgba(29, 161, 242, 1) !important; */
+  /* position: relative; */
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* padding: 8%; */
+  border-radius: 100px;
+  width: 14px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+@media (max-width: 1007px) {
+  .sidenav-user {
+    width: 120%;
+  }
+}
+
+@media (max-width: 1007px) {
+  .sidenav-missing {
+    width: 120%;
+  }
+}
+@media (max-width: 877px) {
+  .side-text {
+    display: none;
+  }
+}
+
+@media (max-width: 877px) {
+  .home {
+    /* margin: 10% 0% 0% 5% ; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: center; */
+  }
+}
+
+@media (max-width: 877px) {
+  .sidenav-user {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 877px) {
+  .sidenav-missing {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 817px) {
+  .main-code {
+    display: none;
+  }
+}
+@media (max-width: 877px) {
+  .main-code {
+    width: 0%;
+  }
+}
+@media (max-width: 877px) {
+  .notification-icon-div {
+    display: none;
+  }
+}
+@media (max-width: 877px) {
+  .main-btn {
+    margin: 5% 5% 5% -35%;
+    width: 150%;
+  }
+}
+
+@media (max-width: 877px) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+}

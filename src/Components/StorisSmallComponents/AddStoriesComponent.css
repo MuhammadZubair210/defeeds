@@ -1,0 +1,80 @@
+.Addstory {
+  border: 1px solid lightgray;
+  width: 124%;
+  height: 100vh !important;
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.Addstory-display {
+  display: flex;
+  justify-content: center;
+}
+.both-borders {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-content: center; */
+  width: 100%;
+}
+
+.first-border {
+  /* border: 1px solid white; */
+  border-radius: 15px;
+  height: 350px;
+  width: 25%;
+  margin: -17%;
+  background-image: linear-gradient(skyblue, blue, skyblue);
+}
+
+.second-border {
+  /* border: 1px solid white; */
+  border-radius: 15px;
+  height: 350px;
+  width: 25%;
+  margin: -17%;
+  background-image: linear-gradient(
+    rgb(172, 114, 248),
+    rgb(209, 68, 155),
+    rgb(216, 27, 105)
+  );
+}
+
+
+.full-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 42%;
+  left: 51%;
+}
+.pic {
+  border: 1px solid white;
+    border-radius: 55pc;
+    padding: 12%;
+    background-color: whitesmoke;
+    box-shadow: 1px 3px #888888;
+
+}
+
+.full-div2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 42%;
+  left: 72%;
+}
+.pic2 {
+  border: 1px solid white;
+    border-radius: 55pc;
+    padding: 12%;
+    background-color: whitesmoke;
+    box-shadow: 1px 3px #888888;
+
+}
+.addphoto{
+  color: whitesmoke;
+  margin-top: 9%;
+}

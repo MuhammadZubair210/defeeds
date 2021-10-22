@@ -1,0 +1,10 @@
+.story-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  justify-content: space-between;
+}
