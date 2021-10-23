@@ -1,41 +1,10 @@
-import { useWallet } from "@solana/wallet-adapter-react";
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
-import React, { useMemo } from "react";
+import React from "react";
 import ImageLightBox from "../ImageLightBox/ImageLightBox";
 import "./Trends.css";
 const RightSideNav = () => {
-  const { publicKey } = useWallet();
-  // useEffect(() => {
-  //   alert(publicKey);
-  // }, [publicKey]);
-
-  const wallets = useMemo(
-    () => {
-      // getPhantomWallet()
-      // getSlopeWallet(),
-      // getSolflareWallet(),
-      // getTorusWallet({
-      //     options: { clientId: 'Get a client ID @ https://developer.tor.us' },
-      // }),
-      // getLedgerWallet(),
-      // getSolletWallet({ network }),
-      // getSolletExtensionWallet({ network }),
-    }
-    // [network]
-  );
-
-  console.log(publicKey?.toBase58());
   return (
     <div className="Rignt-Side-Nav">
       <div className="main-right">
-        <div>
-          {/* <SolanaConnect /> */}
-          <WalletMultiButton />
-          <WalletDisconnectButton />
-        </div>
         <div className="main-search">
           <div className="bottom-border">
             <h5 className="heading-font">Trending Degods Topics</h5>

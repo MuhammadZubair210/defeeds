@@ -10,9 +10,10 @@
 
 /* Bottom left text */
 .bottom-left {
+  background-image: linear-gradient(black, gray);
+  opacity: 0.7;
   position: absolute;
-  bottom: 22px;
-  /* left: 16px; */
+  bottom: 2px;
   font-size: 14px;
   border-block-start: 6%;
   margin: 1% 1%;
@@ -65,30 +66,26 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.story-imgs,
-.story-div {
-  /* width: 181px; */
-  /* height: 200px !important; */
-  /* border-radius: 10px; */
-}
 
-.story-div {
-  /* margin: 2% 1%; */
-}
-
-.post {
+.post-div-home {
   border-radius: 24px !important;
   margin: 0% 1% !important;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 12px 5%;
+  font-weight: 600;
 }
 
 .sub-post {
-  margin: 3%;
+  /* margin: 3%; */
   border: 1px solid;
   border-color: papayawhip;
 
   border-radius: 10px;
   padding: 3% 8%;
-  /* background-color: #ced4db; */
+  background-color: gainsboro;
 }
 .buttons {
   display: flex;
@@ -100,9 +97,9 @@
   font-size: 14px;
 }
 .sub-post-3 {
-  margin: 3%;
-  border: 1px solid #ced4db;
-  border-radius: 10px;
+  margin: 3% 0%;
+  /* border: 1px solid #ced4db; */
+  /* border-radius: 10px; */
 }
 
 .home-heading {
@@ -112,8 +109,8 @@
 }
 
 .slide2 {
-  width: 89% !important;
-  margin: 0% 2% !important;
+  /* width: 89% !important;
+  margin: 0% 2% !important; */
 }
 /* .carousel-inner {
   width: 108%!important;
@@ -171,7 +168,7 @@
   margin: 0 1%;
 }
 .main-recomm {
-  margin: 0px 3%;
+  margin: 0px 1%;
   /* border: 1px solid #ced4db; */
   border-radius: 10px;
   padding: 1% 0px;
@@ -202,11 +199,14 @@
   margin-top: 0;
 }
 .name-puppy {
-  margin: 5%;
+  margin: 5% 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pet-pic {
-  width: 63px;
-  height: 59px;
+  width: 40px;
+  height: 40px;
   border-radius: 80%;
   position: relative;
   object-fit: cover;
@@ -217,7 +217,8 @@
 }
 .para-3 {
   color: grey;
-  margin: 0 2% 3%;
+  font-size: 0.7rem;
+  padding: 3%;
 }
 
 .discover-dots {
@@ -240,4 +241,15 @@
 .icons-all-disc {
   cursor: pointer;
   padding: 3%;
+}
+.new-post-div {
+  width: 100%;
+}
+.individual-posts {
+  background: #fff7f7;
+  border-radius: 10px;
+}
+.post-image-relative video{
+  background: #edebe9;
+
 }

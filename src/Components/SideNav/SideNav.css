@@ -283,3 +283,22 @@
     align-items: center;
   }
 }
+.connected-text-defeed {
+  position: fixed;
+  bottom: 36px;
+  display: flex;
+}
+.main-code .wallet-adapter-button {
+  background: rgb(58, 161, 242) !important;
+}
+.connected-text {
+  font-size: 0.8rem;
+  color: darkslategray;
+  text-align: center;
+  font-weight: 600;
+}
+
+.comming-soon-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}

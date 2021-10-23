@@ -206,7 +206,7 @@
 
 .slide {
   width: 90% !important;
-  margin: 6% 2% !important;
+  margin: 0% 2% !important;
 }
 
 .headings-rightnav2 {
@@ -314,4 +314,9 @@
 }
 .Rignt-Side-Nav {
   width: 25%;
+}
+.no-comments-yet {
+  padding: 1% 2%;
+  color: gray;
+  font-size: 0.7rem;
 }

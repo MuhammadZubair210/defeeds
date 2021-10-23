@@ -22,32 +22,44 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: "2px solid #000",
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    padding: theme.spacing(2, 0, 3),
     width: "37%",
   },
 }));
 
-export default function TransitionsModal({ ...props }) {
+export default function TransitionsModal({
+  setEmoji,
+  setPost,
+  images,
+  video,
+  setPostType,
+  selectVideo,
+  selectImages,
+  emoji,
+  handleClose,
+  setIsLoading,
+  isLoading,
+  refresh,
+  post,
+  postType,
+  background_selected,
+  ...props
+}) {
   const classes = useStyles();
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [secondModal, setSecondModal] = React.useState(false);
-  const [emoji, showEmoji] = React.useState(false);
-  const [selectedEmoji, setSelectedEmoji] = React.useState("");
-  const [showBackground, setShowBackground] = React.useState(false);
+  const [showEmoji, setShowEmoji] = React.useState(false);
   const [backgroundPost, setBackgroundPost] = React.useState(true);
   const [selected, setSelected] = React.useState("");
   const close = () => {
-    showEmoji(false);
+    setShowEmoji(false);
   };
-
-  const selectedEmojiFunc = (em) => {
-    setSelectedEmoji(em);
-    showEmoji(false);
-    console.log("==", em);
+  const selectedEmojiFunc = (emoji) => {
+    setEmoji(emoji);
+    setShowEmoji(false);
   };
   const selectedFunc = (key) => {
     setSelected(key);
   };
+
   return (
     <div>
       <Modal
@@ -55,7 +67,7 @@ export default function TransitionsModal({ ...props }) {
         aria-describedby="transition-modal-description"
         className={classes.modal}
         open={props.open}
-        onClose={() => props.handleClose()}
+        onClose={() => refresh()}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -66,19 +78,21 @@ export default function TransitionsModal({ ...props }) {
           in={props.open}
           style={{
             background: "white",
-            // opacity: "0.8",
           }}
         >
           <div className={classes.paper}>
-            <h2
-              id="transition-modal-title"
-              className="createpost"
-              style={{
-                fontSize: "1.6rem",
-              }}
-            >
-              Create Post
-            </h2>
+            <div className="new-post-header">
+              <div className="space-createpost " />
+              <h2 id="transition-modal-title" className="createpost">
+                Create Post
+              </h2>
+              <div className="space-createpost createpost-closeicon">
+                <img
+                  src={require("../../assets/close.png")}
+                  onClick={() => refresh()}
+                />
+              </div>
+            </div>
             <hr />
             <div className="pic-drop">
               <div>
@@ -91,12 +105,19 @@ export default function TransitionsModal({ ...props }) {
               </div>
               <div className="name-drop">
                 <div className="name-emoji">
-                  <p>782347...w7823</p>
-                  {selectedEmoji !== "" ? (
-                    <div>
-                      <span className="isfeeling">is feeling</span>
-                      {selectedEmoji}
+                  <div className="name-public">
+                    <span>782347...w7823</span>
+                    <div className="world-public-div">
+                      <img
+                        className="world-public-icon"
+                        src={require("../../assets/world.png")}
+                      />
+                      <span className="public-text">Public</span>
                     </div>
+                  </div>
+
+                  {emoji && emoji !== "" ? (
+                    <span className="isfeeling">is feeling {emoji}</span>
                   ) : null}
                 </div>
               </div>
@@ -111,11 +132,12 @@ export default function TransitionsModal({ ...props }) {
                     rows="5"
                     id="comment"
                     style={{ fontSize: "16px" }}
+                    onChange={setPost}
                   ></textarea>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  {props.images
-                    ? props.images.map((val, ind) => {
+                  {images
+                    ? images.map((val, ind) => {
                         return (
                           <div key={ind} style={{ margin: "2%" }}>
                             <img
@@ -127,18 +149,17 @@ export default function TransitionsModal({ ...props }) {
                       })
                     : null}
                 </div>
-                {props.video
-                  ? props.video.map((val, ind) => {
-                      return (
-                        <div className="react-player-video">
-                          <ReactPlayer
-                            url="https://www.youtube.com/watch?v=28xjtYY3V3Q"
-                            className="react-player-video2"
-                          />
-                        </div>
-                      );
-                    })
-                  : null}
+                {video ? (
+                  <div className="react-player-video">
+                    <ReactPlayer
+                      url={video}
+                      className="react-player-video2"
+                      width="100%"
+                      height="100%"
+                      controls={true}
+                    />
+                  </div>
+                ) : null}
               </div>
             ) : (
               <div
@@ -151,47 +172,51 @@ export default function TransitionsModal({ ...props }) {
                   placeholder="Whats On Your Mind?"
                   class="background-div-text"
                   rows="5"
-                  id="comment"
+                  onChange={setPost}
                 ></textarea>
               </div>
             )}
             <div className="emoji-color">
-              {emoji ? (
+              {showEmoji ? (
                 <Emoji close={close} selectedEmoji={selectedEmojiFunc} />
               ) : null}
-              <div>
-                {!backgroundPost ? (
-                  <span
-                    className="color"
-                    onClick={() => setBackgroundPost(!backgroundPost)}
-                  >
-                    close
-                  </span>
-                ) : (
-                  <img
-                    onClick={() => setBackgroundPost(!backgroundPost)}
-                    className="color"
-                    src={require("../../assets/color.jpg")}
-                  />
-                )}
-              </div>
-              <div onClick={() => showEmoji(true)}>
-                <SentimentSatisfiedOutlinedIcon style={{ color: "gray" }} />
+              <div className="backgroundicon-div">
+                <img
+                  onClick={() => {
+                    setBackgroundPost(!backgroundPost);
+                    setPostType("background-image");
+                  }}
+                  className="backgroundicon-color"
+                  src={require("../../assets/backgroundicon.png")}
+                />
               </div>
             </div>
 
             {!backgroundPost ? (
               <div>
-                <HomeBackground selectedFunc={selectedFunc} />
+                <HomeBackground
+                  background_selected={background_selected}
+                  selectedFunc={selectedFunc}
+                />
               </div>
             ) : null}
-            <div className="icons-addpost">
+            <div className="icons-addpost post-div">
+              <span className="add-to-your-post-text">Add to Your Post</span>
               <div className="icons-flex">
-                <p>Add to Your Post</p>
-              </div>
-              <div className="icons-flex">
-                <div>
-                  <label class="btn">
+                <div onClick={() => setShowEmoji(true)}>
+                  <label class="new-post-icons">
+                    <SentimentSatisfiedOutlinedIcon
+                      style={{ color: "#FBD771" }}
+                    />
+                  </label>
+                </div>
+
+                <div
+                  onClick={() => {
+                    setPostType("images");
+                  }}
+                >
+                  <label class="new-post-icons">
                     <PhotoLibraryIcon
                       style={{ color: "lightgreen" }}
                       className="photoLibrary"
@@ -200,14 +225,18 @@ export default function TransitionsModal({ ...props }) {
                       type="file"
                       accept="image/*"
                       multiple
-                      onChange={props.fileSelectedHandler}
+                      onChange={selectImages}
                       style={{ display: "none" }}
                     />
                   </label>
                 </div>
 
-                <div>
-                  <label class="btn">
+                <div
+                  onClick={() => {
+                    setPostType("video");
+                  }}
+                >
+                  <label class="new-post-icons">
                     <VideocamIcon
                       style={{ color: "gray" }}
                       className="photoLibrary"
@@ -216,7 +245,7 @@ export default function TransitionsModal({ ...props }) {
                       type="file"
                       accept="video/*"
                       multiple
-                      onChange={props.fileSelectedHandler2}
+                      onChange={selectVideo}
                       style={{ display: "none" }}
                     />
                   </label>
@@ -224,18 +253,17 @@ export default function TransitionsModal({ ...props }) {
               </div>
             </div>
 
-            <div
-              onClick={() => {
-                setIsLoading(true);
-                setTimeout(() => {
-                  setIsLoading(false);
-                  props.refresh();
-                  props.handleClose();
-                }, 4000);
-              }}
-            >
+            <div className="post-div">
               {!isLoading ? (
-                <button type="button" class="btn btn-primary post-button">
+                <button
+                  type="button"
+                  class="post-button"
+                  onClick={() => {
+                    if (postType !== "" && post !== "") {
+                      handleClose();
+                    }
+                  }}
+                >
                   Post
                 </button>
               ) : (

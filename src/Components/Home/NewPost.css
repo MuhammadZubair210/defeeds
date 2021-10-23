@@ -12,6 +12,8 @@
 }
 .pic-drop {
   display: flex;
+  width: 92%;
+  margin: 0 auto;
 }
 .input-post {
   border: none;
@@ -21,39 +23,88 @@
 }
 .createpost {
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-.color {
+.backgroundicon-color {
+  cursor: pointer;
   width: 9%;
-  border: 2px solid white;
-  border: 2px solid whitw;
+  border: 2px solid gray;
   border-radius: 8px;
   cursor: pointer;
+  padding: 2px;
+}
+.backgroundicon-div {
+  width: 90%;
+  margin: 2% auto;
 }
 .emoji-color {
   display: flex;
   justify-content: space-between;
 }
 .icons-addpost {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
-  padding: 2% 5%;
-  margin: 4% 0%;
-  border-radius: 7px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.post-div {
+  padding: 1% 1%;
+  margin: 0.5% auto;
+  width: 90%;
+}
+.post-btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5%;
+}
+.add-to-your-post-text {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: black;
+}
+.new-post-icons {
+  margin-bottom: 0;
+  cursor: pointer;
 }
 .icons-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-.photoLibrary {
-  margin-right: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
 }
 .post-button {
   width: 100%;
-  background-color: rgb(189, 186, 186);
+  background-color: rgba(29, 161, 242, 1);
   border: none;
+  padding: 1.5%;
+  border-radius: 5px;
+  color: white;
+}
+.world-public-icon {
+  width: 15px;
+  height: 15px;
+}
+.name-public {
+  display: flex;
+  flex-direction: column;
+}
+.world-public-div {
+  background: gainsboro;
+  border-radius: 4px;
+  padding: 0 3%;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+.public-text {
+  font-weight: 600;
+  font-size: 0.7rem;
 }
 .name-drop {
   margin: 0% 3%;
@@ -133,7 +184,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 .background-div {
   display: flex;
@@ -141,8 +192,8 @@
   justify-content: center;
   align-items: center;
   margin: 5% 0%;
-  width: 470px;
-  height: 300px;
+  /* width: 470px; */
+  height: 200px;
 }
 
 .background-div-text {
@@ -161,8 +212,29 @@
 .isfeeling {
   font-size: 12px;
   color: gray;
+  margin-left: 5px;
 }
 textarea:focus,
 select:focus {
   outline: none;
+}
+.new-post-header {
+  display: flex;
+  justify-content: space-between;
+}
+.space-createpost {
+  width: 25%;
+}
+.createpost-closeicon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.createpost {
+  width: 50%;
+}
+.makeStyles-paper-19 {
+  border-width: 0px;
 }

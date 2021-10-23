@@ -1,5 +1,3 @@
-
-
 import React, { Component } from "react";
 import handleViewport from "react-in-viewport";
 import ReactPlayer from "react-player";
@@ -28,14 +26,15 @@ class MySectionBlock extends Component {
   };
 
   render() {
-    const { enterCount, leaveCount } = this.props;
+    const { enterCount, leaveCount, url } = this.props;
     return (
       <section>
         <ReactPlayer
           playing={enterCount === leaveCount ? false : true}
           {...this.props}
-          url="https://www.youtube.com/watch?v=m75EZAy72bs"
+          url={url}
           className="d-block width"
+          controls={true}
         />
       </section>
     );
