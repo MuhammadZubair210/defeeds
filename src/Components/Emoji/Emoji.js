@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
 import Picker, { SKIN_TONE_MEDIUM_DARK } from "emoji-picker-react";
+import PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 import "./Emoji.css";
-const App = ({ ...props }) => {
-  const [chosenEmoji, setChosenEmoji] = useState(null);
+
+const Emoji = ({ ...props }) => {
   const wrapperRef = useRef(null);
 
-  const onEmojiClick = (event, emojiObject) => {
-    setChosenEmoji(emojiObject);
-    console.log(emojiObject.emoji);
+  const onEmojiClick = (a = "", emojiObject) => {
+    console.log(a);
     props.selectedEmoji(emojiObject.emoji);
   };
 
@@ -35,4 +35,9 @@ const App = ({ ...props }) => {
     </div>
   );
 };
-export default App;
+export default Emoji;
+
+Emoji.propTypes = {
+  selectedEmoji: PropTypes.any,
+  close: PropTypes.any,
+};

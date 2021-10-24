@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { Component } from "react";
 import handleViewport from "react-in-viewport";
 import ReactPlayer from "react-player";
@@ -39,6 +40,13 @@ class MySectionBlock extends Component {
       </section>
     );
   }
+}
+
+MySectionBlock.propTypes = {
+  enterCount: PropTypes.number,
+  inViewport: PropTypes.any,
+  leaveCount: PropTypes.any,
+  url: PropTypes.any
 }
 const MySection = handleViewport(MySectionBlock, { rootMargin: "-45.0%" });
 

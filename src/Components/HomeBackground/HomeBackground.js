@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import "./HomeBackground.css";
@@ -36,6 +37,11 @@ const MenuItem = ({ text, selected }) => {
   );
 };
 
+MenuItem.propTypes = {
+  selected: PropTypes.any,
+  text: PropTypes.any,
+};
+
 // All items component
 // Important! add unique key
 export const Menu = (list, selected) =>
@@ -44,10 +50,18 @@ export const Menu = (list, selected) =>
     return <MenuItem text={name} key={name} selected={selected} />;
   });
 
+Menu.propTypes = {
+  map: PropTypes.func,
+};
+
 const Arrow = ({ text, className }) => {
   return <div className={className}>{text}</div>;
 };
 
+Arrow.propTypes = {
+  className: PropTypes.any,
+  text: PropTypes.any,
+};
 
 const selected = "item1";
 
@@ -88,6 +102,11 @@ export default class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  background_selected: PropTypes.func,
+  selectedFunc: PropTypes.func,
+};
 
 function RightArrow() {
   return (

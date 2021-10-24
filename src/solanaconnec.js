@@ -1,9 +1,9 @@
-import React, { FC, useMemo } from "react";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {
   getLedgerWallet,
   getPhantomWallet,
@@ -13,17 +13,13 @@ import {
   getSolletWallet,
   getTorusWallet,
 } from "@solana/wallet-adapter-wallets";
-import {
-  WalletModalProvider,
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
+import React, { useMemo } from "react";
 import Routes from "./Routes";
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css");
 
-export default () => {
+const SolanaConnect = () => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = WalletAdapterNetwork.Devnet;
 
@@ -51,7 +47,7 @@ export default () => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-            <Routes />
+          <Routes />
           {/* <WalletMultiButton />
           <WalletDisconnectButton /> */}
         </WalletModalProvider>
@@ -59,3 +55,4 @@ export default () => {
     </ConnectionProvider>
   );
 };
+export default SolanaConnect;

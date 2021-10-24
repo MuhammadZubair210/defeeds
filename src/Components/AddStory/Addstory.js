@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import "../AllStories/Story.css";
-// import AddStoriesComponent from "../StorisSmallComponents/AddStoriesComponent";
+// import AddStoriesComponent from "../StoriesSmallComponents/AddStoriesComponent";
 // import CloseIcon from "@material-ui/icons/Close";
 // import Stories from "react-insta-stories";
 // import Loader from "react-loader-spinner";

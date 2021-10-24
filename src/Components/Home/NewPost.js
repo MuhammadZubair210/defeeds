@@ -11,6 +11,7 @@ import ReactPlayer from "react-player";
 import Emoji from "../Emoji/Emoji";
 import HomeBackground from "../HomeBackground/HomeBackground";
 import "./NewPost.css";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal({
+const NewPost = ({
   setEmoji,
   setPost,
   images,
@@ -37,14 +38,13 @@ export default function TransitionsModal({
   selectImages,
   emoji,
   handleClose,
-  setIsLoading,
   isLoading,
   refresh,
   post,
   postType,
   background_selected,
-  ...props
-}) {
+  open,
+}) => {
   const classes = useStyles();
   const [showEmoji, setShowEmoji] = React.useState(false);
   const [backgroundPost, setBackgroundPost] = React.useState(true);
@@ -66,7 +66,7 @@ export default function TransitionsModal({
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
-        open={props.open}
+        open={open}
         onClose={() => refresh()}
         closeAfterTransition
         BackdropComponent={Backdrop}
@@ -75,7 +75,7 @@ export default function TransitionsModal({
         }}
       >
         <Fade
-          in={props.open}
+          in={open}
           style={{
             background: "white",
           }}
@@ -125,10 +125,10 @@ export default function TransitionsModal({
 
             {backgroundPost ? (
               <div>
-                <div class="form-group">
+                <div className="form-group">
                   <textarea
                     placeholder="Whats On Your Mind ?"
-                    class="form-control input-post"
+                    className="form-control input-post"
                     rows="5"
                     id="comment"
                     style={{ fontSize: "16px" }}
@@ -170,7 +170,7 @@ export default function TransitionsModal({
               >
                 <textarea
                   placeholder="Whats On Your Mind?"
-                  class="background-div-text"
+                  className="background-div-text"
                   rows="5"
                   onChange={setPost}
                 ></textarea>
@@ -204,7 +204,7 @@ export default function TransitionsModal({
               <span className="add-to-your-post-text">Add to Your Post</span>
               <div className="icons-flex">
                 <div onClick={() => setShowEmoji(true)}>
-                  <label class="new-post-icons">
+                  <label className="new-post-icons">
                     <SentimentSatisfiedOutlinedIcon
                       style={{ color: "#FBD771" }}
                     />
@@ -216,7 +216,7 @@ export default function TransitionsModal({
                     setPostType("images");
                   }}
                 >
-                  <label class="new-post-icons">
+                  <label className="new-post-icons">
                     <PhotoLibraryIcon
                       style={{ color: "lightgreen" }}
                       className="photoLibrary"
@@ -236,7 +236,7 @@ export default function TransitionsModal({
                     setPostType("video");
                   }}
                 >
-                  <label class="new-post-icons">
+                  <label className="new-post-icons">
                     <VideocamIcon
                       style={{ color: "gray" }}
                       className="photoLibrary"
@@ -257,7 +257,7 @@ export default function TransitionsModal({
               {!isLoading ? (
                 <button
                   type="button"
-                  class="post-button"
+                  className="post-button"
                   onClick={() => {
                     if (postType !== "" && post !== "") {
                       handleClose();
@@ -288,4 +288,25 @@ export default function TransitionsModal({
       </Modal>
     </div>
   );
-}
+};
+export default NewPost;
+
+NewPost.propTypes = {
+  background_selected: PropTypes.any,
+  emoji: PropTypes.string,
+  handleClose: PropTypes.func,
+  images: PropTypes.shape({
+    map: PropTypes.func,
+  }),
+  isLoading: PropTypes.any,
+  post: PropTypes.string,
+  postType: PropTypes.string,
+  refresh: PropTypes.func,
+  selectImages: PropTypes.any,
+  selectVideo: PropTypes.any,
+  setEmoji: PropTypes.func,
+  setPost: PropTypes.any,
+  setPostType: PropTypes.func,
+  video: PropTypes.any,
+  open: PropTypes.any,
+};

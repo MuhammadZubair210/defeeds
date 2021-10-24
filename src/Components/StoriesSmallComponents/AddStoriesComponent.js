@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types"
+import PhotoLibraryOutlinedIcon from "@material-ui/icons/PhotoLibraryOutlined";
+import React from "react";
 // import logo from './logo.svg';
 import "./AddStoriesComponent.css";
-import PhotoLibraryOutlinedIcon from "@material-ui/icons/PhotoLibraryOutlined";
 
-function App({ ...props }) {
-
+function App({ fileSelectedHandler }) {
   return (
-    
     <div className="Addstory">
-      
       <div className="both-borders">
         <div className="first-border">
-          <label class="btn">
+          <label className="btn">
             <div className="full-div">
               <div className="pic">
                 <PhotoLibraryOutlinedIcon />
@@ -25,7 +23,7 @@ function App({ ...props }) {
               type="file"
               accept="image/*"
               multiple
-              onChange={props.fileSelectedHandler}
+              onChange={fileSelectedHandler}
               style={{ display: "none" }}
             />
           </label>
@@ -40,11 +38,9 @@ function App({ ...props }) {
             </div>
           </div>
         </div>
-
-       
       </div>
-      {/* {props.images
-          ? props.images.map((val, ind) => {
+      {/* {images
+          ? images.map((val, ind) => {
               return (
                 <div key={ind}>
                   <img
@@ -67,11 +63,8 @@ function App({ ...props }) {
   );
 }
 
-export default App;
+App.propTypes = {
+  fileSelectedHandler: PropTypes.any
+}
 
-const contentStyle = {
-  background: "salmon",
-  width: "100%",
-  padding: 20,
-  color: "white",
-};
+export default App;

@@ -1,12 +1,7 @@
 import React from "react";
-import "./Message2.css";
-import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import BrokenImageOutlinedIcon from "@material-ui/icons/BrokenImageOutlined";
-import SendIcon from "@material-ui/icons/Send";
-import MicIcon from "@material-ui/icons/Mic";
-import { ReactMic } from "react-mic";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import "./Message2.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -78,7 +73,6 @@ class App extends React.Component {
       <div className="App2">
         <div>
           <div>
-            
             <div
               className="chats-story"
               ref={(el) => {
@@ -113,7 +107,7 @@ class App extends React.Component {
                 >
                   <AudioPlayer
                     src="https://www.computerhope.com/jargon/m/example.mp3"
-                    onPlay={(e) => console.log("onPlay")}
+                    onPlay={() => console.log("onPlay")}
                     customVolumeControls={[]}
                     customAdditionalControls={[]}
                     showJumpControls={false}

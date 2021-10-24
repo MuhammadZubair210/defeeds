@@ -4,10 +4,7 @@ import PhotoSizeSelectActualIcon from "@material-ui/icons/PhotoSizeSelectActual"
 import { useWallet } from "@solana/wallet-adapter-react";
 import * as firebase from "firebase";
 import React, { useCallback, useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import uuid from "uuid";
-import { getUserStories, userStories } from "../../store/actions/authActions";
 import Sidenav from "../SideNav/SideNav";
 import Story from "../Story/Story";
 import RightSideNav from "../trends/Trends";
@@ -122,14 +119,13 @@ const Home = ({ ...props }) => {
 
     let res = await Db.collection("Posts")
       .add(newPost)
-      .then((e) => {
-        console.log(e.id);
+      .then(() => {
         setVideo(null);
         setImages([]);
         setIsLoading(false);
         setOpen(false);
       })
-      .catch((e) => {
+      .catch(() => {
         setVideo(null);
         setImages([]);
         setIsLoading(false);
@@ -160,9 +156,6 @@ const Home = ({ ...props }) => {
     }
   });
 
-  console.log(allPosts);
-
-  // render() {
   return (
     <div className="Home">
       <Sidenav {...props} profilePic={""} />
@@ -185,18 +178,18 @@ const Home = ({ ...props }) => {
           style={!pubKey ? { pointerEvents: "none", opacity: "0.5" } : {}}
         >
           <div className="sub-post">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
                 <img
                   src={
                     "https://cdn.alpha.art/opt/b/c/bcd01c3a0fb34e0a7b38e42b11d7cf8dd9c0091a/340.webp"
                   }
                   alt="Snow"
-                  class="profile-img"
+                  className="profile-img"
                 />
               </div>
-              <div class="form-control post-div-home">
-                What's on your mind ?
+              <div className="form-control post-div-home">
+                What is on your mind ?
               </div>
             </div>
 
@@ -253,12 +246,5 @@ const Home = ({ ...props }) => {
     </div>
   );
 };
-const mapStateToProps = (state) => ({
-  state: state,
-});
-const mapDispatchToProps = (dispatch) => ({
-  userStories: bindActionCreators(userStories, dispatch),
-  getUserStories: bindActionCreators(getUserStories, dispatch),
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;

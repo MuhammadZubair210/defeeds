@@ -21,23 +21,20 @@ class App extends React.Component {
     // if (!firebase.auth().currentUser) {
     //   this.props.history.pop();
     // }
-
-    firebase
-      .database()
-      .ref(`users/${this.state.userId}/`)
-      .on("value", (val) => {
-        console.log(val);
-        this.setState({
-          fullName: "Puppy",
-          profilePic: "https://pbs.twimg.com/media/FCIZXVQWUAMJMDG.jpg",
-        });
-      });
+    // firebase
+    //   .database()
+    //   .ref(`users/${this.state.userId}/`)
+    //   .on("value", (val) => {
+    //     this.setState({
+    //       fullName: "Puppy",
+    //       profilePic: "https://pbs.twimg.com/media/FCIZXVQWUAMJMDG.jpg",
+    //     });
+    //   });
   }
 
   render() {
     return (
       <div className="Profile App">
-        {/* <img className="logo" src={require("./assets/logo_big.svg" )} alt="slooth" /> */}
         <div className="main">
           <Sidenav {...this.props} profilePic={this.state.profilePic} />
           {/* ******************* CENTER ********************* */}

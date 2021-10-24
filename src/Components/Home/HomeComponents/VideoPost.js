@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/Favorite";
@@ -32,7 +33,7 @@ const VideoPost = ({ val, ind }) => {
         </div>
 
         <div className="post-image-relative">
-          <div class="top-right top-right-fixed">
+          <div className="top-right top-right-fixed">
             <div className="icons-all-disc">
               <FavoriteBorderIcon
                 className="post-icons"
@@ -71,5 +72,14 @@ const VideoPost = ({ val, ind }) => {
     </div>
   );
 };
+
+VideoPost.propTypes = {
+  ind: PropTypes.any,
+  val: PropTypes.shape({
+    post: PropTypes.any,
+    poster: PropTypes.any,
+    url: PropTypes.any
+  })
+}
 
 export default VideoPost;

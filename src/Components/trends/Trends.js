@@ -1,6 +1,7 @@
 import React from "react";
 import ImageLightBox from "../ImageLightBox/ImageLightBox";
 import "./Trends.css";
+
 const RightSideNav = () => {
   return (
     <div className="Rignt-Side-Nav">
